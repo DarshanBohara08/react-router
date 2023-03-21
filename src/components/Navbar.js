@@ -10,7 +10,6 @@ export const Navbar = () => {
         src="
         https://png.pngtree.com/png-vector/20200921/ourmid/pngtree-red-and-black-logo-png-image_2348180.jpg
         "
-        aliceblue
         alt="logo"
       />
       <nav className="nav">
@@ -21,7 +20,10 @@ export const Navbar = () => {
           About
         </NavLink>
       </nav>
-      <button onClick={() => navigateUser("/login")} className="header--button">
+      <button
+        onClick={() => navigateUser("/register")}
+        className="header--button"
+      >
         Register / Login
       </button>
     </header>

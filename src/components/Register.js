@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../style/Form.css";
-export const SuccessFullyLogin = () => {
+export const Register = () => {
+  const navigateUser = useNavigate();
   const [contactInfo, setContactInfo] = useState({
     name: "",
     email: "",
-    phonenumber: "",
+    password: "",
   });
   /**
    * This function sets value of state onchange
@@ -28,7 +29,7 @@ export const SuccessFullyLogin = () => {
     const userData = {
       name: contactInfo.name,
       email: contactInfo.email,
-      phoneNumber: contactInfo.phonenumber,
+      password: contactInfo.password,
     };
     console.log("userData", userData);
   };
@@ -53,15 +54,19 @@ export const SuccessFullyLogin = () => {
         />
         <input
           className="form--input"
-          type="number"
-          name="phonenumber"
-          value={contactInfo?.phonenumber}
-          placeholder="Enter your phone number"
+          type="password"
+          name="password"
+          value={contactInfo?.password}
+          placeholder="Enter your password"
           onChange={(event) => handleChange(event)}
         />
         <input className="header--button" type="submit" />
       </form>
-      <button style={{ backgroundColor: "black" }} className="header--button">
+      <button
+        onClick={() => navigateUser("/login")}
+        style={{ backgroundColor: "black" }}
+        className="header--button"
+      >
         Login
       </button>
     </div>
