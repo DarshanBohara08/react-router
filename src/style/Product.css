@@ -1,0 +1,11 @@
+.product {
+  display: flex;
+  gap: 80px;
+  padding: 15px;
+  background-color: aqua;
+}
+.product--link {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
