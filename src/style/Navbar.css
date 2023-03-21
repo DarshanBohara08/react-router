@@ -1,0 +1,41 @@
+.header {
+  background-color: #000000;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav {
+  display: flex;
+  gap: 30px;
+}
+.nav--link {
+  color: #ffffff;
+  text-decoration: none;
+  border: 1px solid transparent;
+  padding: 5px 12px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.nav--link.active {
+  border: 1px solid aliceblue;
+}
+
+.header--button {
+  border: none;
+  font-size: 15px;
+  background-color: grey;
+  color: white;
+  padding: 8px 25px;
+  cursor: pointer;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
