@@ -6,7 +6,6 @@ export const CardDetail = () => {
   const { id } = useParams();
   const dataId = typeof id === "string" ? parseInt(id) : id;
   const FData = data?.filter((i) => i.id === dataId);
-  console.log("FData", FData);
   return (
     <>
       {FData?.map((i) => {

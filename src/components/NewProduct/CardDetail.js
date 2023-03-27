@@ -5,10 +5,11 @@ import { newdata } from "./Card";
 export const CardDetail = () => {
   const { id } = useParams();
   const dataId = typeof id === "number" ? id : parseInt(id);
-  const Fdata = newdata?.filter((i) => i.id === dataId);
+  console.log("dataid", dataId);
+  const FilterData = newdata?.filter((i) => i.id === dataId);
   return (
     <div>
-      {Fdata.map((i) => {
+      {FilterData.map((i) => {
         return (
           <div key={i.id}>
             <img height={100} src={i.src} alt="product" />

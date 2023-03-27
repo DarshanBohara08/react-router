@@ -19,16 +19,26 @@ export const data = [
 ];
 export const Card = () => {
   return (
-    <>
+    <div className="card">
       {data?.map((i) => {
         return (
-          <div>
+          <div className="card__detail">
             <img height={200} alt="headphone" src={i.src} />
-            <p>{i.name}</p>
-            <Link to={`${i.id}`}>Read more</Link>
+            <p
+              style={{
+                fontWeight: "bold",
+                textTransform: "capitalize",
+                textAlign: "center",
+              }}
+            >
+              {i.name}
+            </p>
+            <Link className="card__detail--button" to={`${i.id}`}>
+              Read more
+            </Link>
           </div>
         );
       })}
-    </>
+    </div>
   );
 };

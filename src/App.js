@@ -24,6 +24,7 @@ function App() {
         <Route path="login" element={<Login />} />
         <Route path="register" element={<Register />} />
         <Route path="product" element={<Product />}>
+          {/* <Route index element={<NewProduct />} /> */}
           <Route path="new" element={<NewProduct />} />
           <Route path="feature" element={<FeatureProduct />}></Route>
         </Route>
